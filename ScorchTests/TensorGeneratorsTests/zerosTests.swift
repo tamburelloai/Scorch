@@ -49,4 +49,15 @@ final class zerosTests: XCTestCase {
       XCTAssertEqual(tensor.data.count, productOfShapeList)
     }
   }
+  
+  func testTensorZerosLike() {
+    // testing individual integer init
+    let M: Int = Int.random(in: 1...10)
+    let N: Int = Int.random(in: 1...10)
+    let tensor: Tensor<Float> = rand(M, N)
+    let tensorB: Tensor<Float> = zeros(like: tensor)
+    XCTAssertEqual(tensorB.shape, [M, N])
+    XCTAssertEqual(tensorB.data.count, M*N)
+    XCTAssertEqual(tensorB.data.reduce(0, +), 0)
+  }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension Tensor {
-  init(_ values: Any) {
+  public init(_ values: Any) {
     let (data, shape): ([T], [Int]) = Tensor.processValues(values: values)
     self.init(data: data, shape: shape)
   }

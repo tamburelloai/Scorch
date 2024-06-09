@@ -6,13 +6,13 @@
 //
 
 import Foundation
-struct Tensor<T: TensorData> {
+public struct Tensor<T: TensorData> {
   var data: [T]
   var shape: [Int]
   var strides: [Int]
   
   // Subscript for indexing the tensor with multiple dimensions
-  subscript(indices: Int...) -> T {
+  public subscript(indices: Int...) -> T {
     get {
       let index = calculateIndex(indices: indices)
       return data[index]
@@ -23,7 +23,7 @@ struct Tensor<T: TensorData> {
     }
   }
   
-  func element(at index: [Int]) -> T {
+  public func element(at index: [Int]) -> T {
     var flatIndex = 0
     for (i, idx) in index.enumerated() {
       flatIndex += idx * strides[i]
@@ -39,7 +39,7 @@ struct Tensor<T: TensorData> {
 }
 
 extension Tensor: CustomStringConvertible {
-  var description: String {
+  public var description: String {
     return "\(self.nestedArray())"
   }
 }

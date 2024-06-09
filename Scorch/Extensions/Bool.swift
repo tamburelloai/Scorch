@@ -8,5 +8,5 @@
 import Foundation
 
 extension Bool: TensorData {
-  static var zero: Bool { return false }
+  public static var zero: Bool { return false }
 }

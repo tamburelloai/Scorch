@@ -9,7 +9,7 @@ import Foundation
 
 
 extension Float: TensorData {
-  static var zero: Float { return 0.0 }
+  public static var zero: Float { return 0.0 }
   
   static func sampleFromUniform(a: Float, b: Float) -> Float {
     precondition(a < b, "Lower bound 'a' must be less than upper bound 'b'")

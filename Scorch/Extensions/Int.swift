@@ -10,6 +10,6 @@ import Foundation
 
 
 extension Int: TensorData {
-  static var zero: Int { return 0 }
+  public static var zero: Int { return 0 }
 }
 

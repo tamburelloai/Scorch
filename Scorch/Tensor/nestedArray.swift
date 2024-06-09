@@ -8,7 +8,7 @@
 import Foundation
 
 extension Tensor {
-  func nestedArray() -> Any {
+  public func nestedArray() -> Any {
     return createNestedArray(dim: 0, index: [])
   }
   

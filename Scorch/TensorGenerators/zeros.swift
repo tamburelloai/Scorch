@@ -17,3 +17,9 @@ func zeros<T: TensorData>(shape: [Int]) -> Tensor<T> where T: Numeric, T: Expres
 func zeros<T: TensorData>(_ shape: Int...) -> Tensor<T> where T: Numeric, T: ExpressibleByIntegerLiteral {
   zeros(shape: shape)
 }
+
+
+public func zeros<T: TensorData>(like tensor: Tensor<T>) -> Tensor<T> where T: Numeric, T: ExpressibleByIntegerLiteral {
+  zeros(shape: tensor.shape)
+}
+

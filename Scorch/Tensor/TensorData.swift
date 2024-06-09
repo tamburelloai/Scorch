@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: PROTOCOL requiring zero be a static var
-protocol TensorData {
+public protocol TensorData {
   static var zero: Self { get }
 }
 
