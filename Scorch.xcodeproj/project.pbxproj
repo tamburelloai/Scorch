@@ -30,6 +30,8 @@
 		D67175CF2C15194A0023295A /* eyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175CE2C15194A0023295A /* eyeTests.swift */; };
 		D67175D12C15248D0023295A /* nestedArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175D02C15248D0023295A /* nestedArrayTest.swift */; };
 		D67175D32C15270E0023295A /* nestedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175D22C15270E0023295A /* nestedArray.swift */; };
+		D67175D52C152D540023295A /* transpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175D42C152D540023295A /* transpose.swift */; };
+		D67175D72C152E2D0023295A /* transposeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175D62C152E2D0023295A /* transposeTests.swift */; };
 		D6C806812C12946B00C5982E /* Scorch.docc in Sources */ = {isa = PBXBuildFile; fileRef = D6C806802C12946B00C5982E /* Scorch.docc */; };
 		D6C806872C12946B00C5982E /* Scorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C8067C2C12946B00C5982E /* Scorch.framework */; };
 		D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8068B2C12946B00C5982E /* ScorchTests.swift */; };
@@ -72,6 +74,8 @@
 		D67175CE2C15194A0023295A /* eyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eyeTests.swift; sourceTree = "<group>"; };
 		D67175D02C15248D0023295A /* nestedArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nestedArrayTest.swift; sourceTree = "<group>"; };
 		D67175D22C15270E0023295A /* nestedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nestedArray.swift; sourceTree = "<group>"; };
+		D67175D42C152D540023295A /* transpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transpose.swift; sourceTree = "<group>"; };
+		D67175D62C152E2D0023295A /* transposeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transposeTests.swift; sourceTree = "<group>"; };
 		D6C8067C2C12946B00C5982E /* Scorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C8067F2C12946B00C5982E /* Scorch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scorch.h; sourceTree = "<group>"; };
 		D6C806802C12946B00C5982E /* Scorch.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Scorch.docc; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				D67175C42C150ED70023295A /* calculateStridesTest.swift */,
 				D67175C62C150FBC0023295A /* processValuesTest.swift */,
 				D67175D02C15248D0023295A /* nestedArrayTest.swift */,
+				D67175D62C152E2D0023295A /* transposeTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				D67175BA2C14FC060023295A /* calculateStrides.swift */,
 				D67175BC2C1501C00023295A /* processValues.swift */,
 				D67175D22C15270E0023295A /* nestedArray.swift */,
+				D67175D42C152D540023295A /* transpose.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				D67175B72C14EE450023295A /* Bool.swift in Sources */,
 				D6C806812C12946B00C5982E /* Scorch.docc in Sources */,
 				D67175A82C140C490023295A /* zeros.swift in Sources */,
+				D67175D52C152D540023295A /* transpose.swift in Sources */,
 				D67175B52C14EE320023295A /* Int.swift in Sources */,
 				D67175CD2C1518160023295A /* eye.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
@@ -341,6 +348,7 @@
 				D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */,
 				D67175AB2C1417990023295A /* randTests.swift in Sources */,
 				D67175CB2C1517050023295A /* onesTests.swift in Sources */,
+				D67175D72C152E2D0023295A /* transposeTests.swift in Sources */,
 				D67175D12C15248D0023295A /* nestedArrayTest.swift in Sources */,
 				D67175AD2C1417A10023295A /* randnTests.swift in Sources */,
 			);
