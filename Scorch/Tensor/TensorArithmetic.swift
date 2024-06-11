@@ -5,17 +5,15 @@
 //  Created by Michael Tamburello on 6/8/24.
 //
 
-extension Tensor where T: TensorData & Numeric & FloatingPoint {
-  // Generic function to apply an operation element-wise on two tensors
-  static func elementWise(_ left: Tensor, _ right: Tensor, operation: (T, T) -> T) -> Tensor {
-    assert(left.shape == right.shape, "Tensor shapes must be identical to perform element-wise operations")
-    
+//todo: refactor to handle elementwise vs broadcast elementwise
+extension Tensor<Float> {
+  static func elementWise(_ left: Tensor, _ right: Tensor, operation: (T, T) -> T) -> Tensor<Float> {
+    assert(left.shape == right.shape, "tensor a and tensor b must be same size be same size (got \(left.shape) and \(right.shape))")
     var resultData = Array(repeating: T.zero, count: left.data.count)
     for i in 0..<left.data.count {
       resultData[i] = operation(left.data[i], right.data[i])
     }
-    
-    return Tensor(data: resultData, shape: left.shape, strides: left.strides)
+    return Tensor(data: resultData, shape: left.shape)
   }
   
   // Operator overloads using the generic element-wise function

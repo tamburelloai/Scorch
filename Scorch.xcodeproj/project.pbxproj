@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */; };
+		D645027E2C17D27A00C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027D2C17D27A00C469E6 /* broadcast_log.json */; };
+		D64502802C17D28700C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027F2C17D28700C469E6 /* broadcast_log.json */; };
+		D64502822C18258100C469E6 /* TensorBroadcasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64502812C18258100C469E6 /* TensorBroadcasting.swift */; };
 		D67175982C13AB710023295A /* TensorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175972C13AB710023295A /* TensorData.swift */; };
 		D671759D2C13B1A60023295A /* rand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671759C2C13B1A60023295A /* rand.swift */; };
 		D67175A12C13B6B70023295A /* randn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67175A02C13B6B70023295A /* randn.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBroadcastTests.swift; sourceTree = "<group>"; };
+		D645027D2C17D27A00C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
+		D645027F2C17D28700C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
+		D64502812C18258100C469E6 /* TensorBroadcasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBroadcasting.swift; sourceTree = "<group>"; };
 		D67175972C13AB710023295A /* TensorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorData.swift; sourceTree = "<group>"; };
 		D671759C2C13B1A60023295A /* rand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rand.swift; sourceTree = "<group>"; };
 		D67175A02C13B6B70023295A /* randn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randn.swift; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 				D67175D02C15248D0023295A /* nestedArrayTest.swift */,
 				D67175D62C152E2D0023295A /* transposeTests.swift */,
 				D6902FE52C1550F100CE5DFB /* TensorArithmeticTests.swift */,
+				D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -178,6 +187,7 @@
 		D6C8067E2C12946B00C5982E /* Scorch */ = {
 			isa = PBXGroup;
 			children = (
+				D645027D2C17D27A00C469E6 /* broadcast_log.json */,
 				D67175B12C14EE1D0023295A /* Extensions */,
 				D6C806962C1294AC00C5982E /* Tensor */,
 				D671759B2C13B1990023295A /* TensorGenerators */,
@@ -190,6 +200,7 @@
 		D6C8068A2C12946B00C5982E /* ScorchTests */ = {
 			isa = PBXGroup;
 			children = (
+				D645027F2C17D28700C469E6 /* broadcast_log.json */,
 				D6C8068B2C12946B00C5982E /* ScorchTests.swift */,
 				D67175B02C1417C20023295A /* TensorTests */,
 				D67175A92C14176D0023295A /* TensorGeneratorsTests */,
@@ -208,6 +219,7 @@
 				D67175D22C15270E0023295A /* nestedArray.swift */,
 				D67175D42C152D540023295A /* transpose.swift */,
 				D6902FE32C15506A00CE5DFB /* TensorArithmetic.swift */,
+				D64502812C18258100C469E6 /* TensorBroadcasting.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -304,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D645027E2C17D27A00C469E6 /* broadcast_log.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D64502802C17D28700C469E6 /* broadcast_log.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +348,7 @@
 				D67175D52C152D540023295A /* transpose.swift in Sources */,
 				D67175B52C14EE320023295A /* Int.swift in Sources */,
 				D67175CD2C1518160023295A /* eye.swift in Sources */,
+				D64502822C18258100C469E6 /* TensorBroadcasting.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
 				D67175C92C1516C70023295A /* ones.swift in Sources */,
 				D67175BF2C1507190023295A /* TensorInit.swift in Sources */,
@@ -357,6 +372,7 @@
 				D67175AB2C1417990023295A /* randTests.swift in Sources */,
 				D67175CB2C1517050023295A /* onesTests.swift in Sources */,
 				D67175D72C152E2D0023295A /* transposeTests.swift in Sources */,
+				D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */,
 				D67175D12C15248D0023295A /* nestedArrayTest.swift in Sources */,
 				D67175AD2C1417A10023295A /* randnTests.swift in Sources */,
 			);
@@ -501,6 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "ScorchTests/broadcast_log.json Scorch/broadcast_log.json";
 				DEVELOPMENT_TEAM = 645KPM8GG6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -542,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "ScorchTests/broadcast_log.json Scorch/broadcast_log.json";
 				DEVELOPMENT_TEAM = 645KPM8GG6;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
