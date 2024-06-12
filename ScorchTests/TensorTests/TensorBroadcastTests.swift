@@ -159,7 +159,7 @@ final class TensorBroadcastTests: XCTestCase {
       let dataB: [Float] = initZeros(shapeB)
       let tensorB: Tensor = Tensor(data: dataB, shape: shapeB)
       if res["status"] as! String == "success" {
-        let tensorC: Tensor = broadcastAdd(tensorA, tensorB)
+        let tensorC: Tensor = tensorA + tensorB
         XCTAssertEqual(tensorC.shape, res["broadcasted_shape"] as! [Int])
         XCTAssertEqual(tensorC.data.count, (res["flat_values"] as! [Double]).count)
       } else if res["status"] as! String == "error"{

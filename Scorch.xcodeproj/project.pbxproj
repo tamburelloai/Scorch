@@ -48,6 +48,8 @@
 		D6FE23382C183D130074E024 /* TensorStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23372C183D130074E024 /* TensorStackTests.swift */; };
 		D6FE233A2C18F9940074E024 /* concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23392C18F9940074E024 /* concat.swift */; };
 		D6FE233C2C18FFA00074E024 /* TensorConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */; };
+		D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233D2C196BD50074E024 /* DeviceType.swift */; };
+		D6FE23402C1978D00074E024 /* ShapeAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233F2C1978D00074E024 /* ShapeAlignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		D6FE23372C183D130074E024 /* TensorStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorStackTests.swift; sourceTree = "<group>"; };
 		D6FE23392C18F9940074E024 /* concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concat.swift; sourceTree = "<group>"; };
 		D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorConcatTests.swift; sourceTree = "<group>"; };
+		D6FE233D2C196BD50074E024 /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		D6FE233F2C1978D00074E024 /* ShapeAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAlignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +207,8 @@
 				D671759B2C13B1990023295A /* TensorGenerators */,
 				D6C8067F2C12946B00C5982E /* Scorch.h */,
 				D6C806802C12946B00C5982E /* Scorch.docc */,
+				D6FE233D2C196BD50074E024 /* DeviceType.swift */,
+				D6FE233F2C1978D00074E024 /* ShapeAlignment.swift */,
 			);
 			path = Scorch;
 			sourceTree = "<group>";
@@ -350,7 +356,9 @@
 				D6C806982C12950C00C5982E /* Tensor.swift in Sources */,
 				D6902FE42C15506A00CE5DFB /* TensorArithmetic.swift in Sources */,
 				D67175982C13AB710023295A /* TensorData.swift in Sources */,
+				D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */,
 				D6FE233A2C18F9940074E024 /* concat.swift in Sources */,
+				D6FE23402C1978D00074E024 /* ShapeAlignment.swift in Sources */,
 				D67175A12C13B6B70023295A /* randn.swift in Sources */,
 				D67175D32C15270E0023295A /* nestedArray.swift in Sources */,
 				D67175B32C14EE2D0023295A /* Float.swift in Sources */,

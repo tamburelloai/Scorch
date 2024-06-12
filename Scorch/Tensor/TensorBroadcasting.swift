@@ -38,6 +38,7 @@ func indexToMultiDim(_ idx: Int, _ shape: [Int]) -> [Int] {
   }
   return multiDimIndex
 }
+
 func multiDimToIndex(_ multiDimIndex: [Int], _ shape: [Int]) -> Int {
   var index = 0
   for i in (0..<shape.count) {
@@ -68,30 +69,28 @@ func broadcastCompatible<T:TensorData>(_ tensorA: Tensor<T>, _ tensorB: Tensor<T
   return true
 }
 
-public func broadcastAdd<T:TensorData&Numeric>(_ tensorA: Tensor<T>, _ tensorB: Tensor<T>) -> Tensor<T> {
-  assert(broadcastCompatible(tensorA, tensorB))
-  let resultShape: [Int] = calculateBroadcastShape(tensorA.shape, tensorB.shape)
-  let resultSize: Int = productOfDimensions(resultShape)
-  var resultFlatArray: [T] = Array(repeating: T.zero, count: resultSize)
-  
-  let paddedShapeA = padShapeWithOnes(shape: tensorA.shape, maxDims: resultShape.count)
-  let paddedShapeB = padShapeWithOnes(shape: tensorB.shape, maxDims: resultShape.count)
-  
-  for idx in 0..<resultSize {
-    let multiDimIndex: [Int] = indexToMultiDim(idx, resultShape)
+
+
+extension Tensor where T: TensorData & Numeric & FloatingPoint {
+  static func _broadcastOperation(_ tensorA: Tensor<T>, _ tensorB: Tensor<T>, operation: (T, T) -> T) -> Tensor<T> {
+    let resultShape: [Int] = calculateBroadcastShape(tensorA.shape, tensorB.shape)
+    let resultSize: Int = productOfDimensions(resultShape)
+    var resultFlatArray: [T] = Array(repeating: T.zero, count: resultSize)
+    let paddedShapeA = padShapeWithOnes(shape: tensorA.shape, maxDims: resultShape.count)
+    let paddedShapeB = padShapeWithOnes(shape: tensorB.shape, maxDims: resultShape.count)
     
-    let indexA = multiDimToIndex(
-      multiDimIndex.enumerated().map { paddedShapeA[$0.offset] == 1 ? 0 : $0.element },
-      paddedShapeA
-    )
-    
-    let indexB = multiDimToIndex(
-      multiDimIndex.enumerated().map { paddedShapeB[$0.offset] == 1 ? 0 : $0.element },
-      paddedShapeB
-    )
-    
-    resultFlatArray[idx] = tensorA.data[indexA] + tensorB.data[indexB]
+    for idx in 0..<resultSize {
+      let multiDimIndex: [Int] = indexToMultiDim(idx, resultShape)
+      let indexA = multiDimToIndex(
+        multiDimIndex.enumerated().map { paddedShapeA[$0.offset] == 1 ? 0 : $0.element },
+        paddedShapeA
+      )
+      let indexB = multiDimToIndex(
+        multiDimIndex.enumerated().map { paddedShapeB[$0.offset] == 1 ? 0 : $0.element },
+        paddedShapeB
+      )
+      resultFlatArray[idx] = operation(tensorA.data[indexA], tensorB.data[indexB])
+    }
+    return Tensor(data: resultFlatArray, shape: resultShape)
   }
-  
-  return Tensor(data: resultFlatArray, shape: resultShape)
 }
