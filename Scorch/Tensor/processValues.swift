@@ -8,10 +8,11 @@
 import Foundation
 
 
-extension Tensor {
-  static func processValues<TT:TensorData>(values: Any) -> ([TT], [Int]) {
+
+extension Tensor where T: TensorData {
+  static func processValues(values: Any) -> ([T], [Int]) {
     var shape = [Int]()
-    var flatValues = [TT]()
+    var flatValues = [T]()
     func flatten(_ values: Any, currentShape: inout [Int]) {
       if let array = values as? [Any] {
         if let firstSubArray = array.first as? [Any] {
@@ -26,10 +27,10 @@ extension Tensor {
         for element in array {
           flatten(element, currentShape: &currentShape)
         }
-      } else if let value = values as? TT {
+      } else if let value = values as? T {
         flatValues.append(value)
       } else if let value = values as? Double {
-        if let finalValue = Float(value) as? TT {
+        if let finalValue = Float(value) as? T {
           flatValues.append(finalValue)
         } else {
           fatalError("Unsupported type: Failed double->float conversion")

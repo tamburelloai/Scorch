@@ -6,8 +6,8 @@
 //
 
 //todo: refactor to handle elementwise vs broadcast elementwise
-extension Tensor<Float> {
-  static func elementWise(_ left: Tensor, _ right: Tensor, operation: (T, T) -> T) -> Tensor<Float> {
+extension Tensor where T: TensorData & Numeric & FloatingPoint {
+  static func elementWise(_ left: Tensor, _ right: Tensor, operation: (T, T) -> T) -> Tensor<T> {
     assert(left.shape == right.shape, "tensor a and tensor b must be same size be same size (got \(left.shape) and \(right.shape))")
     var resultData = Array(repeating: T.zero, count: left.data.count)
     for i in 0..<left.data.count {

@@ -7,6 +7,9 @@
 
 import Foundation
 
+enum TensorError: Error {
+    case incompatibleShapes
+}
 
 func initZeros(_ shape: [Int]) -> [Float] {
   return Array(repeating: 0, count: shape.reduce(1, *))
@@ -45,7 +48,7 @@ func multiDimToIndex(_ multiDimIndex: [Int], _ shape: [Int]) -> Int {
 
 func padShapeWithOnes(shape: [Int], maxDims: Int) -> [Int] {
   let paddingAmount: Int = maxDims - shape.count
-  var paddingDims: [Int] = Array(repeating: 1, count: paddingAmount)
+  let paddingDims: [Int] = Array(repeating: 1, count: paddingAmount)
   return paddingDims + shape
 }
 
@@ -53,7 +56,20 @@ func productOfDimensions(_ dims: [Int]) -> Int {
   return dims.reduce(1, *)
 }
 
-func broadcastAdd<T:TensorData&Numeric>(_ tensorA: Tensor<T>, _ tensorB: Tensor<T>) -> Tensor<T> {
+func broadcastCompatible<T:TensorData>(_ tensorA: Tensor<T>, _ tensorB: Tensor<T>) -> Bool {
+  let N: Int = min(tensorA.shape.count, tensorB.shape.count)
+  let shapeA: [Int] = tensorA.shape.reversed()
+  let shapeB: [Int] = tensorB.shape.reversed()
+  for i in (0..<N) {
+    if (shapeA[i] == shapeB[i] || shapeA[i] == 1 || shapeB[i] == 1) {
+      continue
+    } else { return false }
+  }
+  return true
+}
+
+public func broadcastAdd<T:TensorData&Numeric>(_ tensorA: Tensor<T>, _ tensorB: Tensor<T>) -> Tensor<T> {
+  assert(broadcastCompatible(tensorA, tensorB))
   let resultShape: [Int] = calculateBroadcastShape(tensorA.shape, tensorB.shape)
   let resultSize: Int = productOfDimensions(resultShape)
   var resultFlatArray: [T] = Array(repeating: T.zero, count: resultSize)

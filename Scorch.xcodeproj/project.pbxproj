@@ -44,6 +44,10 @@
 		D6C8068D2C12946B00C5982E /* Scorch.h in Headers */ = {isa = PBXBuildFile; fileRef = D6C8067F2C12946B00C5982E /* Scorch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6C806982C12950C00C5982E /* Tensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C806972C12950C00C5982E /* Tensor.swift */; };
 		D6C8069A2C12970F00C5982E /* TensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C806992C12970F00C5982E /* TensorTests.swift */; };
+		D6FE23362C1833AD0074E024 /* stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23352C1833AD0074E024 /* stack.swift */; };
+		D6FE23382C183D130074E024 /* TensorStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23372C183D130074E024 /* TensorStackTests.swift */; };
+		D6FE233A2C18F9940074E024 /* concat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23392C18F9940074E024 /* concat.swift */; };
+		D6FE233C2C18FFA00074E024 /* TensorConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +99,10 @@
 		D6C8068B2C12946B00C5982E /* ScorchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorchTests.swift; sourceTree = "<group>"; };
 		D6C806972C12950C00C5982E /* Tensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tensor.swift; sourceTree = "<group>"; };
 		D6C806992C12970F00C5982E /* TensorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorTests.swift; sourceTree = "<group>"; };
+		D6FE23352C1833AD0074E024 /* stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stack.swift; sourceTree = "<group>"; };
+		D6FE23372C183D130074E024 /* TensorStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorStackTests.swift; sourceTree = "<group>"; };
+		D6FE23392C18F9940074E024 /* concat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concat.swift; sourceTree = "<group>"; };
+		D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorConcatTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,8 @@
 				D67175D62C152E2D0023295A /* transposeTests.swift */,
 				D6902FE52C1550F100CE5DFB /* TensorArithmeticTests.swift */,
 				D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */,
+				D6FE23372C183D130074E024 /* TensorStackTests.swift */,
+				D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 				D67175D42C152D540023295A /* transpose.swift */,
 				D6902FE32C15506A00CE5DFB /* TensorArithmetic.swift */,
 				D64502812C18258100C469E6 /* TensorBroadcasting.swift */,
+				D6FE23352C1833AD0074E024 /* stack.swift */,
+				D6FE23392C18F9940074E024 /* concat.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -338,6 +350,7 @@
 				D6C806982C12950C00C5982E /* Tensor.swift in Sources */,
 				D6902FE42C15506A00CE5DFB /* TensorArithmetic.swift in Sources */,
 				D67175982C13AB710023295A /* TensorData.swift in Sources */,
+				D6FE233A2C18F9940074E024 /* concat.swift in Sources */,
 				D67175A12C13B6B70023295A /* randn.swift in Sources */,
 				D67175D32C15270E0023295A /* nestedArray.swift in Sources */,
 				D67175B32C14EE2D0023295A /* Float.swift in Sources */,
@@ -348,6 +361,7 @@
 				D67175D52C152D540023295A /* transpose.swift in Sources */,
 				D67175B52C14EE320023295A /* Int.swift in Sources */,
 				D67175CD2C1518160023295A /* eye.swift in Sources */,
+				D6FE23362C1833AD0074E024 /* stack.swift in Sources */,
 				D64502822C18258100C469E6 /* TensorBroadcasting.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
 				D67175C92C1516C70023295A /* ones.swift in Sources */,
@@ -364,6 +378,8 @@
 				D67175C52C150ED70023295A /* calculateStridesTest.swift in Sources */,
 				D67175C72C150FBC0023295A /* processValuesTest.swift in Sources */,
 				D67175B92C14EFB60023295A /* TensorDataTests.swift in Sources */,
+				D6FE23382C183D130074E024 /* TensorStackTests.swift in Sources */,
+				D6FE233C2C18FFA00074E024 /* TensorConcatTests.swift in Sources */,
 				D67175AF2C1417AD0023295A /* zerosTests.swift in Sources */,
 				D67175CF2C15194A0023295A /* eyeTests.swift in Sources */,
 				D6902FE62C1550F100CE5DFB /* TensorArithmeticTests.swift in Sources */,
