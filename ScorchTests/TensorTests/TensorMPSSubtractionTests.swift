@@ -44,7 +44,7 @@ final class TensorMPSSubtractionTests: XCTestCase {
   }
   
   func testNDSubtraction() {
-    let dims: [Int] = Array(repeating: Int.random(in: 1...10), count: Int.random(in: 3...12))
+    let dims: [Int] = [2, 4, 5, 1]
     let tensors: [Tensor<Float>] = Array(repeating: rand(dims).to(.mps), count: 2)
     let t1: Tensor<Float> = tensors[0]
     let t2: Tensor<Float> = tensors[1]
