@@ -10,6 +10,13 @@
 		D62AACD72C1A728000D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
 		D62AACD82C1A728600D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
 		D62AACDA2C1A789E00D99DB6 /* broadcastAddition.metal in Sources */ = {isa = PBXBuildFile; fileRef = D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */; };
+		D62AACDE2C1A968600D99DB6 /* elementwiseSubtraction.metal in Sources */ = {isa = PBXBuildFile; fileRef = D62AACDD2C1A968600D99DB6 /* elementwiseSubtraction.metal */; };
+		D62AACE02C1A969500D99DB6 /* elementwiseMultiplication.metal in Sources */ = {isa = PBXBuildFile; fileRef = D62AACDF2C1A969500D99DB6 /* elementwiseMultiplication.metal */; };
+		D62AACE22C1A96AC00D99DB6 /* elementwiseDivision.metal in Sources */ = {isa = PBXBuildFile; fileRef = D62AACE12C1A96AC00D99DB6 /* elementwiseDivision.metal */; };
+		D62AACE42C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACE32C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift */; };
+		D62AACE62C1B030300D99DB6 /* reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACE52C1B030300D99DB6 /* reduce.swift */; };
+		D62AACE82C1B05B700D99DB6 /* TensorReduceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACE72C1B05B700D99DB6 /* TensorReduceTests.swift */; };
+		D62AACEA2C1B17F300D99DB6 /* slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACE92C1B17F300D99DB6 /* slice.swift */; };
 		D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */; };
 		D645027E2C17D27A00C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027D2C17D27A00C469E6 /* broadcast_log.json */; };
 		D64502802C17D28700C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027F2C17D28700C469E6 /* broadcast_log.json */; };
@@ -77,6 +84,13 @@
 /* Begin PBXFileReference section */
 		D62AACD62C1A728000D99DB6 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
 		D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = broadcastAddition.metal; sourceTree = "<group>"; };
+		D62AACDD2C1A968600D99DB6 /* elementwiseSubtraction.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = elementwiseSubtraction.metal; sourceTree = "<group>"; };
+		D62AACDF2C1A969500D99DB6 /* elementwiseMultiplication.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = elementwiseMultiplication.metal; sourceTree = "<group>"; };
+		D62AACE12C1A96AC00D99DB6 /* elementwiseDivision.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = elementwiseDivision.metal; sourceTree = "<group>"; };
+		D62AACE32C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorMPSSubtractionTests.swift; sourceTree = "<group>"; };
+		D62AACE52C1B030300D99DB6 /* reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reduce.swift; sourceTree = "<group>"; };
+		D62AACE72C1B05B700D99DB6 /* TensorReduceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorReduceTests.swift; sourceTree = "<group>"; };
+		D62AACE92C1B17F300D99DB6 /* slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = slice.swift; sourceTree = "<group>"; };
 		D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBroadcastTests.swift; sourceTree = "<group>"; };
 		D645027D2C17D27A00C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
 		D645027F2C17D28700C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
@@ -194,6 +208,8 @@
 				D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */,
 				D6FE23502C1A57E00074E024 /* TensorCPUAdditionTests.swift */,
 				D6FE23522C1A60C40074E024 /* TensorMPSAdditionTests.swift */,
+				D62AACE32C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift */,
+				D62AACE72C1B05B700D99DB6 /* TensorReduceTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -269,6 +285,8 @@
 				D64502812C18258100C469E6 /* TensorBroadcasting.swift */,
 				D6FE23352C1833AD0074E024 /* stack.swift */,
 				D6FE23392C18F9940074E024 /* concat.swift */,
+				D62AACE52C1B030300D99DB6 /* reduce.swift */,
+				D62AACE92C1B17F300D99DB6 /* slice.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -305,6 +323,9 @@
 			children = (
 				D6FE234E2C1A4C4E0074E024 /* elementwiseAddition.metal */,
 				D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */,
+				D62AACDD2C1A968600D99DB6 /* elementwiseSubtraction.metal */,
+				D62AACDF2C1A969500D99DB6 /* elementwiseMultiplication.metal */,
+				D62AACE12C1A96AC00D99DB6 /* elementwiseDivision.metal */,
 			);
 			path = Kernels;
 			sourceTree = "<group>";
@@ -431,11 +452,14 @@
 			files = (
 				D6C806982C12950C00C5982E /* Tensor.swift in Sources */,
 				D6FE23482C1A424B0074E024 /* MPSBackendError.swift in Sources */,
+				D62AACE02C1A969500D99DB6 /* elementwiseMultiplication.metal in Sources */,
 				D6902FE42C15506A00CE5DFB /* TensorArithmetic.swift in Sources */,
 				D62AACDA2C1A789E00D99DB6 /* broadcastAddition.metal in Sources */,
 				D67175982C13AB710023295A /* TensorData.swift in Sources */,
 				D6FE234F2C1A4C4F0074E024 /* elementwiseAddition.metal in Sources */,
+				D62AACE22C1A96AC00D99DB6 /* elementwiseDivision.metal in Sources */,
 				D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */,
+				D62AACDE2C1A968600D99DB6 /* elementwiseSubtraction.metal in Sources */,
 				D6FE233A2C18F9940074E024 /* concat.swift in Sources */,
 				D6FE23402C1978D00074E024 /* ShapeAlignment.swift in Sources */,
 				D6FE23442C1A09390074E024 /* CPUBackend.swift in Sources */,
@@ -454,9 +478,11 @@
 				D64502822C18258100C469E6 /* TensorBroadcasting.swift in Sources */,
 				D6FE23462C1A09410074E024 /* MPSBackend.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
+				D62AACEA2C1B17F300D99DB6 /* slice.swift in Sources */,
 				D67175C92C1516C70023295A /* ones.swift in Sources */,
 				D67175BF2C1507190023295A /* TensorInit.swift in Sources */,
 				D67175BB2C14FC060023295A /* calculateStrides.swift in Sources */,
+				D62AACE62C1B030300D99DB6 /* reduce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +492,7 @@
 			files = (
 				D67175C32C1507F70023295A /* TensorInitTests.swift in Sources */,
 				D67175C52C150ED70023295A /* calculateStridesTest.swift in Sources */,
+				D62AACE42C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift in Sources */,
 				D6FE23532C1A60C40074E024 /* TensorMPSAdditionTests.swift in Sources */,
 				D67175C72C150FBC0023295A /* processValuesTest.swift in Sources */,
 				D67175B92C14EFB60023295A /* TensorDataTests.swift in Sources */,
@@ -479,6 +506,7 @@
 				D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */,
 				D67175AB2C1417990023295A /* randTests.swift in Sources */,
 				D67175CB2C1517050023295A /* onesTests.swift in Sources */,
+				D62AACE82C1B05B700D99DB6 /* TensorReduceTests.swift in Sources */,
 				D67175D72C152E2D0023295A /* transposeTests.swift in Sources */,
 				D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */,
 				D67175D12C15248D0023295A /* nestedArrayTest.swift in Sources */,

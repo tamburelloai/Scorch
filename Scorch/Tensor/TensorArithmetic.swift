@@ -31,7 +31,7 @@ extension Tensor where T: TensorData & Numeric & FloatingPoint {
   
   static private func elementwiseOperation(_ lhs: Tensor<T>, _ rhs: Tensor<T>, operation: OperationType) -> Tensor<T> {
     switch deviceLocation(lhs, rhs) {
-    case .mps: return MPSBackend.shared.broadcastOperation(lhs, rhs, operation) //  MPSBackend.elementwiseOperation(lhs, rhs, operation)
+    case .mps: return MPSBackend.shared.elementwiseOperation(lhs, rhs, operation) //  MPSBackend.elementwiseOperation(lhs, rhs, operation)
     case .cpu: return CPUBackend.elementwiseOperation(lhs, rhs, operation)
     }
   }

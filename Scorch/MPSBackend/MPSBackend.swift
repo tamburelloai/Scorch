@@ -59,13 +59,11 @@ class MPSBackend: ObservableObject {
   func elementwiseOperation<T:TensorData&Numeric&FloatingPoint>(_ lhs: Tensor<T>, _ rhs: Tensor<T>, _ operation: OperationType) -> Tensor<T> {
     switch operation {
     case .add: return self.elementwiseAddition(lhs, rhs)
-    case .subtract: return self.elementwiseAddition(lhs, rhs)
-    case .multiply: return self.elementwiseAddition(lhs, rhs)
-    case .divide: return self.elementwiseAddition(lhs, rhs)
+    case .subtract: return self.elementwiseSubtraction(lhs, rhs)
+    case .multiply: return self.elementwiseMultiplication(lhs, rhs)
+    case .divide: return self.elementwiseDivision(lhs, rhs)
     }
   }
-  
-    
   
   func createBufferFromTensor<T:TensorData&Numeric>(_ tensor: Tensor<T>) -> MTLBuffer {
     let dataSize: Int = tensor.data.count * MemoryLayout<T>.size
@@ -78,6 +76,87 @@ class MPSBackend: ObservableObject {
     guard let commandBuffer = commandQueue.makeCommandBuffer(),
           let commandEncoder = commandBuffer.makeComputeCommandEncoder(),
           let computePipelineState = getComputePipeline(for: "elementwiseAddition") else {
+      fatalError("Failed to create command buffer or command encoder")
+    }
+    commandEncoder.setComputePipelineState(computePipelineState)
+    commandEncoder.setBuffer(createBufferFromTensor(lhs), offset: 0, index: 0)
+    commandEncoder.setBuffer(createBufferFromTensor(rhs), offset: 0, index: 1)
+    
+    let resultBuffer: MTLBuffer = createBufferFromTensor(result)
+    commandEncoder.setBuffer(resultBuffer, offset: 0, index: 2)
+    
+    let threadCount: Int = result.data.count
+    let threadGroupSize = MTLSize(width: 256, height: 1, depth: 1) // This should divide the grid size without remainder.
+    let numThreadgroups = MTLSize(width: (threadCount + threadGroupSize.width - 1) / threadGroupSize.width, height: 1, depth: 1)
+    commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadGroupSize)
+    commandEncoder.endEncoding()
+    commandBuffer.commit()
+    commandBuffer.waitUntilCompleted()
+    let resultPointer = resultBuffer.contents().bindMemory(to: Float.self, capacity: threadCount)
+    result.data = Array(UnsafeBufferPointer(start: resultPointer, count: threadCount)) as! [T]
+    return result
+  }
+  
+  func elementwiseSubtraction<T:TensorData&Numeric>(_ lhs: Tensor<T>, _ rhs: Tensor<T>) -> Tensor<T> {
+    assert(lhs.shape == rhs.shape, "elementwiseAddition requires identical tensor shapes, got \(lhs.shape), \(rhs.shape)")
+    var result: Tensor<T> = zeros(shape: lhs.shape)
+    guard let commandBuffer = commandQueue.makeCommandBuffer(),
+          let commandEncoder = commandBuffer.makeComputeCommandEncoder(),
+          let computePipelineState = getComputePipeline(for: "elementwiseSubtraction") else {
+      fatalError("Failed to create command buffer or command encoder")
+    }
+    commandEncoder.setComputePipelineState(computePipelineState)
+    commandEncoder.setBuffer(createBufferFromTensor(lhs), offset: 0, index: 0)
+    commandEncoder.setBuffer(createBufferFromTensor(rhs), offset: 0, index: 1)
+    
+    let resultBuffer: MTLBuffer = createBufferFromTensor(result)
+    commandEncoder.setBuffer(resultBuffer, offset: 0, index: 2)
+    
+    let threadCount: Int = result.data.count
+    let threadGroupSize = MTLSize(width: 256, height: 1, depth: 1) // This should divide the grid size without remainder.
+    let numThreadgroups = MTLSize(width: (threadCount + threadGroupSize.width - 1) / threadGroupSize.width, height: 1, depth: 1)
+    commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadGroupSize)
+    commandEncoder.endEncoding()
+    commandBuffer.commit()
+    commandBuffer.waitUntilCompleted()
+    let resultPointer = resultBuffer.contents().bindMemory(to: Float.self, capacity: threadCount)
+    result.data = Array(UnsafeBufferPointer(start: resultPointer, count: threadCount)) as! [T]
+    return result
+  }
+  
+  func elementwiseMultiplication<T:TensorData&Numeric>(_ lhs: Tensor<T>, _ rhs: Tensor<T>) -> Tensor<T> {
+    assert(lhs.shape == rhs.shape, "elementwiseAddition requires identical tensor shapes, got \(lhs.shape), \(rhs.shape)")
+    var result: Tensor<T> = zeros(shape: lhs.shape)
+    guard let commandBuffer = commandQueue.makeCommandBuffer(),
+          let commandEncoder = commandBuffer.makeComputeCommandEncoder(),
+          let computePipelineState = getComputePipeline(for: "elementwiseMultiplication") else {
+      fatalError("Failed to create command buffer or command encoder")
+    }
+    commandEncoder.setComputePipelineState(computePipelineState)
+    commandEncoder.setBuffer(createBufferFromTensor(lhs), offset: 0, index: 0)
+    commandEncoder.setBuffer(createBufferFromTensor(rhs), offset: 0, index: 1)
+    
+    let resultBuffer: MTLBuffer = createBufferFromTensor(result)
+    commandEncoder.setBuffer(resultBuffer, offset: 0, index: 2)
+    
+    let threadCount: Int = result.data.count
+    let threadGroupSize = MTLSize(width: 256, height: 1, depth: 1) // This should divide the grid size without remainder.
+    let numThreadgroups = MTLSize(width: (threadCount + threadGroupSize.width - 1) / threadGroupSize.width, height: 1, depth: 1)
+    commandEncoder.dispatchThreadgroups(numThreadgroups, threadsPerThreadgroup: threadGroupSize)
+    commandEncoder.endEncoding()
+    commandBuffer.commit()
+    commandBuffer.waitUntilCompleted()
+    let resultPointer = resultBuffer.contents().bindMemory(to: Float.self, capacity: threadCount)
+    result.data = Array(UnsafeBufferPointer(start: resultPointer, count: threadCount)) as! [T]
+    return result
+  }
+  
+  func elementwiseDivision<T:TensorData&Numeric>(_ lhs: Tensor<T>, _ rhs: Tensor<T>) -> Tensor<T> {
+    assert(lhs.shape == rhs.shape, "elementwiseAddition requires identical tensor shapes, got \(lhs.shape), \(rhs.shape)")
+    var result: Tensor<T> = zeros(shape: lhs.shape)
+    guard let commandBuffer = commandQueue.makeCommandBuffer(),
+          let commandEncoder = commandBuffer.makeComputeCommandEncoder(),
+          let computePipelineState = getComputePipeline(for: "elementwiseDivision") else {
       fatalError("Failed to create command buffer or command encoder")
     }
     commandEncoder.setComputePipelineState(computePipelineState)
@@ -195,7 +274,6 @@ class MPSBackend: ObservableObject {
     }
     return Tensor(data: resultFlatArray, shape: resultShape)
   }
-  
   
 }
 

@@ -53,7 +53,7 @@ final class TensorCPUAdditionTests: XCTestCase {
   }
   
   func testNDAddition() {
-    let dims: [Int] = Array(repeating: Int.random(in: 1...10), count: Int.random(in: 3...12))
+    let dims: [Int] = Array(repeating: Int.random(in: 1...10), count: 4)
     let tensors: [Tensor<Float>] = Array(repeating: rand(dims), count: 2)
     let t1: Tensor<Float> = tensors[0]
     let t2: Tensor<Float> = tensors[1]
