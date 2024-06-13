@@ -17,3 +17,4 @@ func rand(_ shape: Int...) -> Tensor<Float> {
   rand(shape)
 }
 
+

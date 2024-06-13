@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D62AACD72C1A728000D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
+		D62AACD82C1A728600D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
+		D62AACDA2C1A789E00D99DB6 /* broadcastAddition.metal in Sources */ = {isa = PBXBuildFile; fileRef = D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */; };
 		D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */; };
 		D645027E2C17D27A00C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027D2C17D27A00C469E6 /* broadcast_log.json */; };
 		D64502802C17D28700C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027F2C17D28700C469E6 /* broadcast_log.json */; };
@@ -50,6 +53,15 @@
 		D6FE233C2C18FFA00074E024 /* TensorConcatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */; };
 		D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233D2C196BD50074E024 /* DeviceType.swift */; };
 		D6FE23402C1978D00074E024 /* ShapeAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE233F2C1978D00074E024 /* ShapeAlignment.swift */; };
+		D6FE23442C1A09390074E024 /* CPUBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23432C1A09390074E024 /* CPUBackend.swift */; };
+		D6FE23462C1A09410074E024 /* MPSBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23452C1A09410074E024 /* MPSBackend.swift */; };
+		D6FE23482C1A424B0074E024 /* MPSBackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23472C1A424B0074E024 /* MPSBackendError.swift */; };
+		D6FE234D2C1A47AF0074E024 /* makePipelineState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE234C2C1A47AF0074E024 /* makePipelineState.swift */; };
+		D6FE234F2C1A4C4F0074E024 /* elementwiseAddition.metal in Sources */ = {isa = PBXBuildFile; fileRef = D6FE234E2C1A4C4E0074E024 /* elementwiseAddition.metal */; };
+		D6FE23512C1A57E00074E024 /* TensorCPUAdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23502C1A57E00074E024 /* TensorCPUAdditionTests.swift */; };
+		D6FE23532C1A60C40074E024 /* TensorMPSAdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FE23522C1A60C40074E024 /* TensorMPSAdditionTests.swift */; };
+		D6FE23562C1A67760074E024 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FE23552C1A67760074E024 /* Metal.framework */; };
+		D6FE23572C1A67A00074E024 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6FE23552C1A67760074E024 /* Metal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D62AACD62C1A728000D99DB6 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
+		D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = broadcastAddition.metal; sourceTree = "<group>"; };
 		D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBroadcastTests.swift; sourceTree = "<group>"; };
 		D645027D2C17D27A00C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
 		D645027F2C17D28700C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
@@ -107,6 +121,14 @@
 		D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorConcatTests.swift; sourceTree = "<group>"; };
 		D6FE233D2C196BD50074E024 /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		D6FE233F2C1978D00074E024 /* ShapeAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeAlignment.swift; sourceTree = "<group>"; };
+		D6FE23432C1A09390074E024 /* CPUBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUBackend.swift; sourceTree = "<group>"; };
+		D6FE23452C1A09410074E024 /* MPSBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSBackend.swift; sourceTree = "<group>"; };
+		D6FE23472C1A424B0074E024 /* MPSBackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSBackendError.swift; sourceTree = "<group>"; };
+		D6FE234C2C1A47AF0074E024 /* makePipelineState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePipelineState.swift; sourceTree = "<group>"; };
+		D6FE234E2C1A4C4E0074E024 /* elementwiseAddition.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = elementwiseAddition.metal; sourceTree = "<group>"; };
+		D6FE23502C1A57E00074E024 /* TensorCPUAdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorCPUAdditionTests.swift; sourceTree = "<group>"; };
+		D6FE23522C1A60C40074E024 /* TensorMPSAdditionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorMPSAdditionTests.swift; sourceTree = "<group>"; };
+		D6FE23552C1A67760074E024 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/Metal.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62AACD82C1A728600D99DB6 /* MetalKit.framework in Frameworks */,
+				D6FE23562C1A67760074E024 /* Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62AACD72C1A728000D99DB6 /* MetalKit.framework in Frameworks */,
+				D6FE23572C1A67A00074E024 /* Metal.framework in Frameworks */,
 				D6C806872C12946B00C5982E /* Scorch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +192,8 @@
 				D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */,
 				D6FE23372C183D130074E024 /* TensorStackTests.swift */,
 				D6FE233B2C18FFA00074E024 /* TensorConcatTests.swift */,
+				D6FE23502C1A57E00074E024 /* TensorCPUAdditionTests.swift */,
+				D6FE23522C1A60C40074E024 /* TensorMPSAdditionTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -186,6 +214,7 @@
 				D6C8067E2C12946B00C5982E /* Scorch */,
 				D6C8068A2C12946B00C5982E /* ScorchTests */,
 				D6C8067D2C12946B00C5982E /* Products */,
+				D6FE23542C1A67750074E024 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +230,8 @@
 		D6C8067E2C12946B00C5982E /* Scorch */ = {
 			isa = PBXGroup;
 			children = (
+				D6FE23422C1A09110074E024 /* CPUBackend */,
+				D6FE23412C1A09060074E024 /* MPSBackend */,
 				D645027D2C17D27A00C469E6 /* broadcast_log.json */,
 				D67175B12C14EE1D0023295A /* Extensions */,
 				D6C806962C1294AC00C5982E /* Tensor */,
@@ -240,6 +271,51 @@
 				D6FE23392C18F9940074E024 /* concat.swift */,
 			);
 			path = Tensor;
+			sourceTree = "<group>";
+		};
+		D6FE23412C1A09060074E024 /* MPSBackend */ = {
+			isa = PBXGroup;
+			children = (
+				D6FE234B2C1A43D80074E024 /* Kernels */,
+				D6FE234A2C1A43CB0074E024 /* PipelineStateObjects */,
+				D6FE23452C1A09410074E024 /* MPSBackend.swift */,
+				D6FE23472C1A424B0074E024 /* MPSBackendError.swift */,
+				D6FE234C2C1A47AF0074E024 /* makePipelineState.swift */,
+			);
+			path = MPSBackend;
+			sourceTree = "<group>";
+		};
+		D6FE23422C1A09110074E024 /* CPUBackend */ = {
+			isa = PBXGroup;
+			children = (
+				D6FE23432C1A09390074E024 /* CPUBackend.swift */,
+			);
+			path = CPUBackend;
+			sourceTree = "<group>";
+		};
+		D6FE234A2C1A43CB0074E024 /* PipelineStateObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PipelineStateObjects;
+			sourceTree = "<group>";
+		};
+		D6FE234B2C1A43D80074E024 /* Kernels */ = {
+			isa = PBXGroup;
+			children = (
+				D6FE234E2C1A4C4E0074E024 /* elementwiseAddition.metal */,
+				D62AACD92C1A789E00D99DB6 /* broadcastAddition.metal */,
+			);
+			path = Kernels;
+			sourceTree = "<group>";
+		};
+		D6FE23542C1A67750074E024 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D62AACD62C1A728000D99DB6 /* MetalKit.framework */,
+				D6FE23552C1A67760074E024 /* Metal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,11 +430,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6C806982C12950C00C5982E /* Tensor.swift in Sources */,
+				D6FE23482C1A424B0074E024 /* MPSBackendError.swift in Sources */,
 				D6902FE42C15506A00CE5DFB /* TensorArithmetic.swift in Sources */,
+				D62AACDA2C1A789E00D99DB6 /* broadcastAddition.metal in Sources */,
 				D67175982C13AB710023295A /* TensorData.swift in Sources */,
+				D6FE234F2C1A4C4F0074E024 /* elementwiseAddition.metal in Sources */,
 				D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */,
 				D6FE233A2C18F9940074E024 /* concat.swift in Sources */,
 				D6FE23402C1978D00074E024 /* ShapeAlignment.swift in Sources */,
+				D6FE23442C1A09390074E024 /* CPUBackend.swift in Sources */,
 				D67175A12C13B6B70023295A /* randn.swift in Sources */,
 				D67175D32C15270E0023295A /* nestedArray.swift in Sources */,
 				D67175B32C14EE2D0023295A /* Float.swift in Sources */,
@@ -366,11 +446,13 @@
 				D67175B72C14EE450023295A /* Bool.swift in Sources */,
 				D6C806812C12946B00C5982E /* Scorch.docc in Sources */,
 				D67175A82C140C490023295A /* zeros.swift in Sources */,
+				D6FE234D2C1A47AF0074E024 /* makePipelineState.swift in Sources */,
 				D67175D52C152D540023295A /* transpose.swift in Sources */,
 				D67175B52C14EE320023295A /* Int.swift in Sources */,
 				D67175CD2C1518160023295A /* eye.swift in Sources */,
 				D6FE23362C1833AD0074E024 /* stack.swift in Sources */,
 				D64502822C18258100C469E6 /* TensorBroadcasting.swift in Sources */,
+				D6FE23462C1A09410074E024 /* MPSBackend.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
 				D67175C92C1516C70023295A /* ones.swift in Sources */,
 				D67175BF2C1507190023295A /* TensorInit.swift in Sources */,
@@ -384,6 +466,7 @@
 			files = (
 				D67175C32C1507F70023295A /* TensorInitTests.swift in Sources */,
 				D67175C52C150ED70023295A /* calculateStridesTest.swift in Sources */,
+				D6FE23532C1A60C40074E024 /* TensorMPSAdditionTests.swift in Sources */,
 				D67175C72C150FBC0023295A /* processValuesTest.swift in Sources */,
 				D67175B92C14EFB60023295A /* TensorDataTests.swift in Sources */,
 				D6FE23382C183D130074E024 /* TensorStackTests.swift in Sources */,
@@ -392,6 +475,7 @@
 				D67175CF2C15194A0023295A /* eyeTests.swift in Sources */,
 				D6902FE62C1550F100CE5DFB /* TensorArithmeticTests.swift in Sources */,
 				D6C8069A2C12970F00C5982E /* TensorTests.swift in Sources */,
+				D6FE23512C1A57E00074E024 /* TensorCPUAdditionTests.swift in Sources */,
 				D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */,
 				D67175AB2C1417990023295A /* randTests.swift in Sources */,
 				D67175CB2C1517050023295A /* onesTests.swift in Sources */,

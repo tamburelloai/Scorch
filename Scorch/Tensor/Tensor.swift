@@ -10,6 +10,7 @@ public struct Tensor<T: TensorData> {
   var data: [T]
   var shape: [Int]
   var strides: [Int]
+  var device: DeviceType
   
   // Subscript for indexing the tensor with multiple dimensions
   public subscript(indices: Int...) -> T {
@@ -35,6 +36,12 @@ public struct Tensor<T: TensorData> {
   private func calculateIndex(indices: [Int]) -> Int {
     assert(indices.count == shape.count, "Index count does not match shape dimensions.")
     return indices.enumerated().reduce(0) { $0 + $1.element * strides[$1.offset] }
+  }
+  
+  func to(_ device: DeviceType) -> Tensor {
+    var newTensor = self
+    newTensor.device = device
+    return newTensor
   }
 }
 

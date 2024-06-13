@@ -20,6 +20,6 @@ extension Tensor {
     var newStrides = self.strides.map {$0}   // Swap the shape dimensions
     newShape.swapAt(dim0, dim1)
     newStrides.swapAt(dim0, dim1)
-    return Tensor(data: self.data, shape: newShape, strides: newStrides)
+    return Tensor(data: self.data, shape: newShape, strides: newStrides, device: self.device)
   }
 }
