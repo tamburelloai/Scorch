@@ -7,12 +7,12 @@
 
 import Foundation
 
-func ones<T: TensorData>(shape: [Int]) -> Tensor<T> where T: Numeric, T: ExpressibleByIntegerLiteral {
+func ones<T: TensorData>(shape: [Int]) -> Tensor<T> where T: Numeric {
   let totalElements = shape.reduce(1, *)
   let onesData: [T] = Array(repeating: T.zero + 1, count: totalElements)
   return Tensor(data: onesData, shape: shape)
 }
 
-func ones<T: TensorData>(_ shape: Int...) -> Tensor<T> where T: Numeric, T: ExpressibleByIntegerLiteral {
+func ones<T: TensorData>(_ shape: Int...) -> Tensor<T> where T: Numeric {
   ones(shape: shape)
 }

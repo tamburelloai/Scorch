@@ -21,6 +21,22 @@
 		D62AACF12C1B5C5E00D99DB6 /* NNParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF02C1B5C5E00D99DB6 /* NNParameter.swift */; };
 		D62AACF32C1B5C6300D99DB6 /* NNBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF22C1B5C6300D99DB6 /* NNBuffer.swift */; };
 		D62AACF52C1B60FA00D99DB6 /* NN.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF42C1B60FA00D99DB6 /* NN.swift */; };
+		D62AACF82C1B769F00D99DB6 /* Adam.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF72C1B769F00D99DB6 /* Adam.swift */; };
+		D62AACFA2C1B76EE00D99DB6 /* Optimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */; };
+		D62AACFD2C1B7BC000D99DB6 /* Linear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACFC2C1B7BC000D99DB6 /* Linear.swift */; };
+		D62AAD002C1B9AF600D99DB6 /* NNAct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACFF2C1B9AF600D99DB6 /* NNAct.swift */; };
+		D62AAD022C1B9AFC00D99DB6 /* sigmoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD012C1B9AFC00D99DB6 /* sigmoid.swift */; };
+		D62AAD042C1B9B0400D99DB6 /* ReLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD032C1B9B0400D99DB6 /* ReLU.swift */; };
+		D62AAD062C1B9B1100D99DB6 /* LeakyReLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */; };
+		D62AAD082C1B9B1A00D99DB6 /* tanh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD072C1B9B1A00D99DB6 /* tanh.swift */; };
+		D62AAD0A2C1BA23700D99DB6 /* BatchNorm1D.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD092C1BA23700D99DB6 /* BatchNorm1D.swift */; };
+		D62AAD0D2C1CC66800D99DB6 /* mean.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD0C2C1CC66800D99DB6 /* mean.swift */; };
+		D62AAD0F2C1CD07500D99DB6 /* ScalarTensorArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD0E2C1CD07500D99DB6 /* ScalarTensorArithmetic.swift */; };
+		D62AAD112C1CD87000D99DB6 /* TensorMeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD102C1CD87000D99DB6 /* TensorMeanTests.swift */; };
+		D62AAD132C1CDF1600D99DB6 /* squeeze.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD122C1CDF1600D99DB6 /* squeeze.swift */; };
+		D62AAD152C1CF58600D99DB6 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD142C1CF58600D99DB6 /* item.swift */; };
+		D62AAD172C1CFD2700D99DB6 /* variance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD162C1CFD2700D99DB6 /* variance.swift */; };
+		D62AAD192C1D096C00D99DB6 /* TensorVarianceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD182C1D096C00D99DB6 /* TensorVarianceTests.swift */; };
 		D645027A2C17D16F00C469E6 /* TensorBroadcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */; };
 		D645027E2C17D27A00C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027D2C17D27A00C469E6 /* broadcast_log.json */; };
 		D64502802C17D28700C469E6 /* broadcast_log.json in Resources */ = {isa = PBXBuildFile; fileRef = D645027F2C17D28700C469E6 /* broadcast_log.json */; };
@@ -99,6 +115,22 @@
 		D62AACF02C1B5C5E00D99DB6 /* NNParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNParameter.swift; sourceTree = "<group>"; };
 		D62AACF22C1B5C6300D99DB6 /* NNBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNBuffer.swift; sourceTree = "<group>"; };
 		D62AACF42C1B60FA00D99DB6 /* NN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NN.swift; sourceTree = "<group>"; };
+		D62AACF72C1B769F00D99DB6 /* Adam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam.swift; sourceTree = "<group>"; };
+		D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optimizer.swift; sourceTree = "<group>"; };
+		D62AACFC2C1B7BC000D99DB6 /* Linear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linear.swift; sourceTree = "<group>"; };
+		D62AACFF2C1B9AF600D99DB6 /* NNAct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NNAct.swift; sourceTree = "<group>"; };
+		D62AAD012C1B9AFC00D99DB6 /* sigmoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sigmoid.swift; sourceTree = "<group>"; };
+		D62AAD032C1B9B0400D99DB6 /* ReLU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLU.swift; sourceTree = "<group>"; };
+		D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakyReLU.swift; sourceTree = "<group>"; };
+		D62AAD072C1B9B1A00D99DB6 /* tanh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tanh.swift; sourceTree = "<group>"; };
+		D62AAD092C1BA23700D99DB6 /* BatchNorm1D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchNorm1D.swift; sourceTree = "<group>"; };
+		D62AAD0C2C1CC66800D99DB6 /* mean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mean.swift; sourceTree = "<group>"; };
+		D62AAD0E2C1CD07500D99DB6 /* ScalarTensorArithmetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalarTensorArithmetic.swift; sourceTree = "<group>"; };
+		D62AAD102C1CD87000D99DB6 /* TensorMeanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorMeanTests.swift; sourceTree = "<group>"; };
+		D62AAD122C1CDF1600D99DB6 /* squeeze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = squeeze.swift; sourceTree = "<group>"; };
+		D62AAD142C1CF58600D99DB6 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		D62AAD162C1CFD2700D99DB6 /* variance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = variance.swift; sourceTree = "<group>"; };
+		D62AAD182C1D096C00D99DB6 /* TensorVarianceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorVarianceTests.swift; sourceTree = "<group>"; };
 		D64502792C17D16F00C469E6 /* TensorBroadcastTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorBroadcastTests.swift; sourceTree = "<group>"; };
 		D645027D2C17D27A00C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
 		D645027F2C17D28700C469E6 /* broadcast_log.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = broadcast_log.json; sourceTree = "<group>"; };
@@ -187,6 +219,36 @@
 			path = NN;
 			sourceTree = "<group>";
 		};
+		D62AACF62C1B768700D99DB6 /* Optimizers */ = {
+			isa = PBXGroup;
+			children = (
+				D62AACF72C1B769F00D99DB6 /* Adam.swift */,
+				D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */,
+			);
+			path = Optimizers;
+			sourceTree = "<group>";
+		};
+		D62AACFB2C1B7BAA00D99DB6 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				D62AACFC2C1B7BC000D99DB6 /* Linear.swift */,
+				D62AAD092C1BA23700D99DB6 /* BatchNorm1D.swift */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		D62AACFE2C1B9AE700D99DB6 /* Activations */ = {
+			isa = PBXGroup;
+			children = (
+				D62AACFF2C1B9AF600D99DB6 /* NNAct.swift */,
+				D62AAD012C1B9AFC00D99DB6 /* sigmoid.swift */,
+				D62AAD032C1B9B0400D99DB6 /* ReLU.swift */,
+				D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */,
+				D62AAD072C1B9B1A00D99DB6 /* tanh.swift */,
+			);
+			path = Activations;
+			sourceTree = "<group>";
+		};
 		D671759B2C13B1990023295A /* TensorGenerators */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +291,8 @@
 				D6FE23522C1A60C40074E024 /* TensorMPSAdditionTests.swift */,
 				D62AACE32C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift */,
 				D62AACE72C1B05B700D99DB6 /* TensorReduceTests.swift */,
+				D62AAD102C1CD87000D99DB6 /* TensorMeanTests.swift */,
+				D62AAD182C1D096C00D99DB6 /* TensorVarianceTests.swift */,
 			);
 			path = TensorTests;
 			sourceTree = "<group>";
@@ -265,6 +329,9 @@
 		D6C8067E2C12946B00C5982E /* Scorch */ = {
 			isa = PBXGroup;
 			children = (
+				D62AACFE2C1B9AE700D99DB6 /* Activations */,
+				D62AACFB2C1B7BAA00D99DB6 /* Layers */,
+				D62AACF62C1B768700D99DB6 /* Optimizers */,
 				D62AACED2C1B5A5400D99DB6 /* NN */,
 				D6FE23422C1A09110074E024 /* CPUBackend */,
 				D6FE23412C1A09060074E024 /* MPSBackend */,
@@ -307,6 +374,11 @@
 				D6FE23392C18F9940074E024 /* concat.swift */,
 				D62AACE52C1B030300D99DB6 /* reduce.swift */,
 				D62AACE92C1B17F300D99DB6 /* slice.swift */,
+				D62AAD0C2C1CC66800D99DB6 /* mean.swift */,
+				D62AAD0E2C1CD07500D99DB6 /* ScalarTensorArithmetic.swift */,
+				D62AAD122C1CDF1600D99DB6 /* squeeze.swift */,
+				D62AAD142C1CF58600D99DB6 /* item.swift */,
+				D62AAD162C1CFD2700D99DB6 /* variance.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -474,9 +546,11 @@
 				D6FE23482C1A424B0074E024 /* MPSBackendError.swift in Sources */,
 				D62AACE02C1A969500D99DB6 /* elementwiseMultiplication.metal in Sources */,
 				D62AACEF2C1B5A7600D99DB6 /* NNModule.swift in Sources */,
+				D62AAD062C1B9B1100D99DB6 /* LeakyReLU.swift in Sources */,
 				D6902FE42C15506A00CE5DFB /* TensorArithmetic.swift in Sources */,
 				D62AACDA2C1A789E00D99DB6 /* broadcastAddition.metal in Sources */,
 				D67175982C13AB710023295A /* TensorData.swift in Sources */,
+				D62AACFA2C1B76EE00D99DB6 /* Optimizer.swift in Sources */,
 				D6FE234F2C1A4C4F0074E024 /* elementwiseAddition.metal in Sources */,
 				D62AACE22C1A96AC00D99DB6 /* elementwiseDivision.metal in Sources */,
 				D6FE233E2C196BD50074E024 /* DeviceType.swift in Sources */,
@@ -487,10 +561,12 @@
 				D67175A12C13B6B70023295A /* randn.swift in Sources */,
 				D67175D32C15270E0023295A /* nestedArray.swift in Sources */,
 				D67175B32C14EE2D0023295A /* Float.swift in Sources */,
+				D62AAD172C1CFD2700D99DB6 /* variance.swift in Sources */,
 				D671759D2C13B1A60023295A /* rand.swift in Sources */,
 				D67175B72C14EE450023295A /* Bool.swift in Sources */,
 				D62AACF32C1B5C6300D99DB6 /* NNBuffer.swift in Sources */,
 				D6C806812C12946B00C5982E /* Scorch.docc in Sources */,
+				D62AAD0A2C1BA23700D99DB6 /* BatchNorm1D.swift in Sources */,
 				D67175A82C140C490023295A /* zeros.swift in Sources */,
 				D6FE234D2C1A47AF0074E024 /* makePipelineState.swift in Sources */,
 				D67175D52C152D540023295A /* transpose.swift in Sources */,
@@ -501,11 +577,21 @@
 				D62AACF52C1B60FA00D99DB6 /* NN.swift in Sources */,
 				D6FE23462C1A09410074E024 /* MPSBackend.swift in Sources */,
 				D67175BD2C1501C00023295A /* processValues.swift in Sources */,
+				D62AAD0F2C1CD07500D99DB6 /* ScalarTensorArithmetic.swift in Sources */,
 				D62AACEA2C1B17F300D99DB6 /* slice.swift in Sources */,
+				D62AAD082C1B9B1A00D99DB6 /* tanh.swift in Sources */,
 				D67175C92C1516C70023295A /* ones.swift in Sources */,
+				D62AACFD2C1B7BC000D99DB6 /* Linear.swift in Sources */,
+				D62AAD132C1CDF1600D99DB6 /* squeeze.swift in Sources */,
+				D62AAD042C1B9B0400D99DB6 /* ReLU.swift in Sources */,
+				D62AAD002C1B9AF600D99DB6 /* NNAct.swift in Sources */,
+				D62AAD152C1CF58600D99DB6 /* item.swift in Sources */,
+				D62AAD0D2C1CC66800D99DB6 /* mean.swift in Sources */,
 				D67175BF2C1507190023295A /* TensorInit.swift in Sources */,
 				D62AACF12C1B5C5E00D99DB6 /* NNParameter.swift in Sources */,
+				D62AAD022C1B9AFC00D99DB6 /* sigmoid.swift in Sources */,
 				D67175BB2C14FC060023295A /* calculateStrides.swift in Sources */,
+				D62AACF82C1B769F00D99DB6 /* Adam.swift in Sources */,
 				D62AACE62C1B030300D99DB6 /* reduce.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D67175C32C1507F70023295A /* TensorInitTests.swift in Sources */,
+				D62AAD112C1CD87000D99DB6 /* TensorMeanTests.swift in Sources */,
 				D67175C52C150ED70023295A /* calculateStridesTest.swift in Sources */,
 				D62AACE42C1A979E00D99DB6 /* TensorMPSSubtractionTests.swift in Sources */,
 				D6FE23532C1A60C40074E024 /* TensorMPSAdditionTests.swift in Sources */,
@@ -523,6 +610,7 @@
 				D6FE23382C183D130074E024 /* TensorStackTests.swift in Sources */,
 				D6FE233C2C18FFA00074E024 /* TensorConcatTests.swift in Sources */,
 				D67175AF2C1417AD0023295A /* zerosTests.swift in Sources */,
+				D62AAD192C1D096C00D99DB6 /* TensorVarianceTests.swift in Sources */,
 				D67175CF2C15194A0023295A /* eyeTests.swift in Sources */,
 				D6902FE62C1550F100CE5DFB /* TensorArithmeticTests.swift in Sources */,
 				D6C8069A2C12970F00C5982E /* TensorTests.swift in Sources */,

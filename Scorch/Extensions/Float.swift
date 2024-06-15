@@ -23,5 +23,7 @@ extension Float: TensorData {
     let z0 = sqrt(-2.0 * log(u1)) * cos(2.0 * .pi * u2)
     return z0 * sigma + mu
   }
+  
+  
 }
 

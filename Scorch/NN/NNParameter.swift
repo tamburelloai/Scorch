@@ -28,9 +28,13 @@ struct NNParameter {
     
   }
   
+  static func placeholder() -> NNParameter {
+    return NNParameter(0, initDist: .zeros)
+  }
+  
     
   /// Updates parameter (weight) values
-  mutating func update() {
+  func update() {
     assert(self.grad != nil)
     //TODO: implement
   }
