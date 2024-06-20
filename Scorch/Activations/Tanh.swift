@@ -1,5 +1,5 @@
 //
-//  ReLU.swift
+//  tanh.swift
 //  Scorch
 //
 //  Created by Michael Tamburello on 6/13/24.
@@ -7,9 +7,9 @@
 
 import Foundation
 import TensorKit
-
+//
 //extension NN {
-//  struct ReLU: NNAct {
+//  struct Tanh: NNAct {
 //    init() {}
 //    
 //    func forward(_ x: Tensor<Float>) -> Tensor<Float> {

@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import TensorKit
 
-extension NNAct {
-  func _leakyReLU(_ input: Tensor<Float>) -> Tensor<Float> {
-    return rand(5, 12)
-  }
-}
+//extension NN {
+//  struct LeakyReLU: NNAct {
+//    init() {}
+//    
+//    func forward(_ x: Tensor<Float>) -> Tensor<Float> {
+//      return zeros(1)
+//    }
+//
+//    func backward() -> Tensor<Float> {
+//      return zeros(1)
+//    }
+//  }
+//}
