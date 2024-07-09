@@ -11,22 +11,16 @@
 		D629A9892C2117D300ECAC12 /* TensorKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D629A9852C2117B600ECAC12 /* TensorKit.framework */; };
 		D62AACD72C1A728000D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
 		D62AACD82C1A728600D99DB6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D62AACD62C1A728000D99DB6 /* MetalKit.framework */; };
-		D62AACF82C1B769F00D99DB6 /* Adam.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF72C1B769F00D99DB6 /* Adam.swift */; };
-		D62AACFA2C1B76EE00D99DB6 /* Optimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */; };
-		D62AAD022C1B9AFC00D99DB6 /* Sigmoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD012C1B9AFC00D99DB6 /* Sigmoid.swift */; };
-		D62AAD042C1B9B0400D99DB6 /* ReLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD032C1B9B0400D99DB6 /* ReLU.swift */; };
-		D62AAD062C1B9B1100D99DB6 /* LeakyReLU.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */; };
-		D62AAD082C1B9B1A00D99DB6 /* Tanh.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62AAD072C1B9B1A00D99DB6 /* Tanh.swift */; };
+		D63B37DC2C2E0AD300028185 /* DefaultDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63B37DB2C2E0AD300028185 /* DefaultDict.swift */; };
+		D63B37E02C2E0AF400028185 /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63B37DF2C2E0AF400028185 /* Variable.swift */; };
+		D63B37E22C2E0D7100028185 /* TensorAutoGradExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63B37E12C2E0D7100028185 /* TensorAutoGradExtension.swift */; };
 		D65B75772C247A5600667D79 /* OrderedDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B75762C247A5600667D79 /* OrderedDict.swift */; };
-		D65B757B2C247ABB00667D79 /* OrderedDictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B757A2C247ABB00667D79 /* OrderedDictTests.swift */; };
 		D65B757D2C247B1000667D79 /* InitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65B757C2C247B1000667D79 /* InitType.swift */; };
-		D6B720BF2C2274FC00EB115D /* LinearInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B720BE2C2274FC00EB115D /* LinearInitTests.swift */; };
-		D6B720C32C22780B00EB115D /* LinearForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B720C22C22780B00EB115D /* LinearForwardTests.swift */; };
+		D6B693A92C386B7D003FEA6E /* AutoGrad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B693A82C386B7D003FEA6E /* AutoGrad.swift */; };
+		D6B693AF2C386E07003FEA6E /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B693AE2C386E07003FEA6E /* Module.swift */; };
+		D6B693B12C386E2C003FEA6E /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B693B02C386E2C003FEA6E /* Parameter.swift */; };
+		D6B693B32C386EA2003FEA6E /* Linear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B693B22C386EA2003FEA6E /* Linear.swift */; };
 		D6B720D02C228FCF00EB115D /* CPUBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B720CF2C228FCF00EB115D /* CPUBackend.swift */; };
-		D6B720EF2C237A4100EB115D /* SigmoidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B720EE2C237A4100EB115D /* SigmoidTests.swift */; };
-		D6B7210F2C23CB7200EB115D /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B7210E2C23CB7200EB115D /* Module.swift */; };
-		D6B721112C23D6EB00EB115D /* Linear.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B721102C23D6EB00EB115D /* Linear.swift */; };
-		D6B721152C23D72200EB115D /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B721142C23D72200EB115D /* Parameter.swift */; };
 		D6C806812C12946B00C5982E /* Scorch.docc in Sources */ = {isa = PBXBuildFile; fileRef = D6C806802C12946B00C5982E /* Scorch.docc */; };
 		D6C806872C12946B00C5982E /* Scorch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C8067C2C12946B00C5982E /* Scorch.framework */; };
 		D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C8068B2C12946B00C5982E /* ScorchTests.swift */; };
@@ -130,27 +124,21 @@
 		D629A97C2C2117B500ECAC12 /* TensorKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorKitTests.swift; sourceTree = "<group>"; };
 		D629A97E2C2117B500ECAC12 /* TensorKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TensorKit.xcodeproj; sourceTree = "<group>"; };
 		D62AACD62C1A728000D99DB6 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.5.sdk/System/Library/Frameworks/MetalKit.framework; sourceTree = DEVELOPER_DIR; };
-		D62AACF72C1B769F00D99DB6 /* Adam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam.swift; sourceTree = "<group>"; };
-		D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optimizer.swift; sourceTree = "<group>"; };
-		D62AAD012C1B9AFC00D99DB6 /* Sigmoid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sigmoid.swift; sourceTree = "<group>"; };
-		D62AAD032C1B9B0400D99DB6 /* ReLU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReLU.swift; sourceTree = "<group>"; };
-		D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakyReLU.swift; sourceTree = "<group>"; };
-		D62AAD072C1B9B1A00D99DB6 /* Tanh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tanh.swift; sourceTree = "<group>"; };
+		D63B37DB2C2E0AD300028185 /* DefaultDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDict.swift; sourceTree = "<group>"; };
+		D63B37DF2C2E0AF400028185 /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		D63B37E12C2E0D7100028185 /* TensorAutoGradExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TensorAutoGradExtension.swift; sourceTree = "<group>"; };
 		D65B75762C247A5600667D79 /* OrderedDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDict.swift; sourceTree = "<group>"; };
-		D65B757A2C247ABB00667D79 /* OrderedDictTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedDictTests.swift; sourceTree = "<group>"; };
 		D65B757C2C247B1000667D79 /* InitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitType.swift; sourceTree = "<group>"; };
-		D6B720BE2C2274FC00EB115D /* LinearInitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearInitTests.swift; sourceTree = "<group>"; };
-		D6B720C22C22780B00EB115D /* LinearForwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearForwardTests.swift; sourceTree = "<group>"; };
+		D6B693A82C386B7D003FEA6E /* AutoGrad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoGrad.swift; sourceTree = "<group>"; };
+		D6B693AE2C386E07003FEA6E /* Module.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		D6B693B02C386E2C003FEA6E /* Parameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
+		D6B693B22C386EA2003FEA6E /* Linear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Linear.swift; sourceTree = "<group>"; };
 		D6B720CF2C228FCF00EB115D /* CPUBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUBackend.swift; sourceTree = "<group>"; };
-		D6B720EE2C237A4100EB115D /* SigmoidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigmoidTests.swift; sourceTree = "<group>"; };
 		D6B720F52C239ADF00EB115D /* relu.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = relu.metal; sourceTree = "<group>"; };
 		D6B720F62C239ADF00EB115D /* tanh.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = tanh.metal; sourceTree = "<group>"; };
 		D6B720F72C239ADF00EB115D /* sigmoidForward.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = sigmoidForward.metal; sourceTree = "<group>"; };
 		D6B720F82C239ADF00EB115D /* leakyReLU.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = leakyReLU.metal; sourceTree = "<group>"; };
 		D6B720F92C239BA000EB115D /* sigmoidBackward.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = sigmoidBackward.metal; sourceTree = "<group>"; };
-		D6B7210E2C23CB7200EB115D /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
-		D6B721102C23D6EB00EB115D /* Linear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linear.swift; sourceTree = "<group>"; };
-		D6B721142C23D72200EB115D /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		D6C8067C2C12946B00C5982E /* Scorch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Scorch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C8067F2C12946B00C5982E /* Scorch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Scorch.h; sourceTree = "<group>"; };
 		D6C806802C12946B00C5982E /* Scorch.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Scorch.docc; sourceTree = "<group>"; };
@@ -272,6 +260,7 @@
 				D629A9522C2117B500ECAC12 /* TensorData.swift */,
 				D629A9532C2117B500ECAC12 /* TensorInit.swift */,
 				D629A9542C2117B500ECAC12 /* variance.swift */,
+				D63B37E12C2E0D7100028185 /* TensorAutoGradExtension.swift */,
 			);
 			path = Tensor;
 			sourceTree = "<group>";
@@ -378,72 +367,13 @@
 		D62AACED2C1B5A5400D99DB6 /* NN */ = {
 			isa = PBXGroup;
 			children = (
+				D6B693B22C386EA2003FEA6E /* Linear.swift */,
+				D6B693B02C386E2C003FEA6E /* Parameter.swift */,
+				D6B693AE2C386E07003FEA6E /* Module.swift */,
 				D6B720CB2C228FBA00EB115D /* CPUBackend */,
 				D6B720CE2C228FC200EB115D /* MPSBackend */,
-				D6B7210E2C23CB7200EB115D /* Module.swift */,
-				D6B721142C23D72200EB115D /* Parameter.swift */,
 			);
 			path = NN;
-			sourceTree = "<group>";
-		};
-		D62AACF62C1B768700D99DB6 /* Optimizers */ = {
-			isa = PBXGroup;
-			children = (
-				D62AACF72C1B769F00D99DB6 /* Adam.swift */,
-				D62AACF92C1B76EE00D99DB6 /* Optimizer.swift */,
-			);
-			path = Optimizers;
-			sourceTree = "<group>";
-		};
-		D62AACFB2C1B7BAA00D99DB6 /* Layers */ = {
-			isa = PBXGroup;
-			children = (
-				D6B721102C23D6EB00EB115D /* Linear.swift */,
-			);
-			path = Layers;
-			sourceTree = "<group>";
-		};
-		D62AACFE2C1B9AE700D99DB6 /* Activations */ = {
-			isa = PBXGroup;
-			children = (
-				D62AAD012C1B9AFC00D99DB6 /* Sigmoid.swift */,
-				D62AAD032C1B9B0400D99DB6 /* ReLU.swift */,
-				D62AAD052C1B9B1100D99DB6 /* LeakyReLU.swift */,
-				D62AAD072C1B9B1A00D99DB6 /* Tanh.swift */,
-			);
-			path = Activations;
-			sourceTree = "<group>";
-		};
-		D6B720BC2C2274E400EB115D /* LayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6B720BD2C2274E900EB115D /* LinearTests */,
-			);
-			path = LayerTests;
-			sourceTree = "<group>";
-		};
-		D6B720BD2C2274E900EB115D /* LinearTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6B720BE2C2274FC00EB115D /* LinearInitTests.swift */,
-				D6B720C22C22780B00EB115D /* LinearForwardTests.swift */,
-			);
-			path = LinearTests;
-			sourceTree = "<group>";
-		};
-		D6B720C02C2277B500EB115D /* ActivationTests */ = {
-			isa = PBXGroup;
-			children = (
-				D6B720EE2C237A4100EB115D /* SigmoidTests.swift */,
-			);
-			path = ActivationTests;
-			sourceTree = "<group>";
-		};
-		D6B720C12C2277D200EB115D /* OptimizerTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OptimizerTests;
 			sourceTree = "<group>";
 		};
 		D6B720CB2C228FBA00EB115D /* CPUBackend */ = {
@@ -496,13 +426,13 @@
 			isa = PBXGroup;
 			children = (
 				D62AACED2C1B5A5400D99DB6 /* NN */,
-				D62AACFB2C1B7BAA00D99DB6 /* Layers */,
-				D62AACFE2C1B9AE700D99DB6 /* Activations */,
-				D62AACF62C1B768700D99DB6 /* Optimizers */,
 				D6C8067F2C12946B00C5982E /* Scorch.h */,
 				D6C806802C12946B00C5982E /* Scorch.docc */,
 				D65B75762C247A5600667D79 /* OrderedDict.swift */,
 				D65B757C2C247B1000667D79 /* InitType.swift */,
+				D63B37DB2C2E0AD300028185 /* DefaultDict.swift */,
+				D63B37DF2C2E0AF400028185 /* Variable.swift */,
+				D6B693A82C386B7D003FEA6E /* AutoGrad.swift */,
 			);
 			path = Scorch;
 			sourceTree = "<group>";
@@ -510,11 +440,7 @@
 		D6C8068A2C12946B00C5982E /* ScorchTests */ = {
 			isa = PBXGroup;
 			children = (
-				D6B720BC2C2274E400EB115D /* LayerTests */,
-				D6B720C02C2277B500EB115D /* ActivationTests */,
-				D6B720C12C2277D200EB115D /* OptimizerTests */,
 				D6C8068B2C12946B00C5982E /* ScorchTests.swift */,
-				D65B757A2C247ABB00667D79 /* OrderedDictTests.swift */,
 			);
 			path = ScorchTests;
 			sourceTree = "<group>";
@@ -661,19 +587,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62AAD062C1B9B1100D99DB6 /* LeakyReLU.swift in Sources */,
-				D62AACFA2C1B76EE00D99DB6 /* Optimizer.swift in Sources */,
-				D6B721112C23D6EB00EB115D /* Linear.swift in Sources */,
+				D6B693A92C386B7D003FEA6E /* AutoGrad.swift in Sources */,
 				D65B757D2C247B1000667D79 /* InitType.swift in Sources */,
+				D63B37E02C2E0AF400028185 /* Variable.swift in Sources */,
+				D6B693AF2C386E07003FEA6E /* Module.swift in Sources */,
+				D63B37E22C2E0D7100028185 /* TensorAutoGradExtension.swift in Sources */,
 				D6C806812C12946B00C5982E /* Scorch.docc in Sources */,
-				D6B7210F2C23CB7200EB115D /* Module.swift in Sources */,
-				D6B721152C23D72200EB115D /* Parameter.swift in Sources */,
+				D6B693B32C386EA2003FEA6E /* Linear.swift in Sources */,
 				D65B75772C247A5600667D79 /* OrderedDict.swift in Sources */,
-				D62AAD082C1B9B1A00D99DB6 /* Tanh.swift in Sources */,
-				D62AAD042C1B9B0400D99DB6 /* ReLU.swift in Sources */,
+				D63B37DC2C2E0AD300028185 /* DefaultDict.swift in Sources */,
+				D6B693B12C386E2C003FEA6E /* Parameter.swift in Sources */,
 				D6B720D02C228FCF00EB115D /* CPUBackend.swift in Sources */,
-				D62AAD022C1B9AFC00D99DB6 /* Sigmoid.swift in Sources */,
-				D62AACF82C1B769F00D99DB6 /* Adam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,10 +605,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D65B757B2C247ABB00667D79 /* OrderedDictTests.swift in Sources */,
-				D6B720EF2C237A4100EB115D /* SigmoidTests.swift in Sources */,
-				D6B720BF2C2274FC00EB115D /* LinearInitTests.swift in Sources */,
-				D6B720C32C22780B00EB115D /* LinearForwardTests.swift in Sources */,
 				D6C8068C2C12946B00C5982E /* ScorchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

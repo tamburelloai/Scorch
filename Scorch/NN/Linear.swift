@@ -11,41 +11,36 @@
 import Foundation
 import TensorKit
 
+//TODO: Add support for bias=True
 
+
+
+/// A traditional linear layer that performs a linear
+/// transformation on the input
 class Linear: Module {
   let inputSize: Int
   let outputSize: Int
-  let bias: Bool
   
-  init(_ inputSize: Int, _ outputSize: Int, bias: Bool = true) {
+  /// Initialization to store the the input/output sizes, initialize the super, and finally init the params
+  init(_ inputSize: Int, _ outputSize: Int) {
     self.inputSize = inputSize
     self.outputSize = outputSize
-    self.bias = bias
     super.init()
+    self._initParams()
+  }
+  
+  /// adds the parameters of the module to the parameter dict defined by the super
+  func _initParams() {
     self._parameters["weight"] = Parameter([inputSize, outputSize], initType: .randomNormal)
-    if self.bias {
-      self._parameters["bias"] = Parameter([1, outputSize], initType: .randomNormal)
-    }
   }
   
-  override func forward(_ x: NNTensor) -> NNTensor {
-    self._buffers["forwardPass"] = x.tensor
-    var output: Tensor<Float> = Tensor.matMul(x.tensor, self._parameters["weight"].data)
-    if self.bias {
-      output = output + self._parameters["bias"].data
-    }
-    return NNTensor(tensor: output, parentOp: self, isLeaf: false)
-  }
-  
-  override func forward(_ x: Tensor<Float>) -> Tensor<Float> {
+  /// stores the input and calculates/returns the linear transformation
+  override func forward(_ x: ScorchTensor) -> ScorchTensor {
     self._buffers["forwardPass"] = x
-    var output: Tensor<Float> = Tensor.matMul(x, self._parameters["weight"].data)
-    if self.bias {
-      output = output + self._parameters["bias"].data
-    }
+    var output: ScorchTensor = AutoGrad.matMul(x, self._parameters["weight"])
     return output
   }
   
-  override func backward(_ runningGrad: NNTensor) {
-  }
+  override func backward(_ runningGrad: ScorchTensor) {}
+  
 }

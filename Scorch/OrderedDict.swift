@@ -23,20 +23,11 @@ struct OrderedDict<Key: Hashable, Value> {
     return keys.compactMap { values[$0] }
   }
   
-  subscript(key: Key) -> Value? {
-    get {
-      return values[key]
-    }
+  subscript(key: Key) -> Value {
+    get { return values[key]! }
     set {
-      if let newValue = newValue {
-        if values[key] == nil {
-          keys.append(key)
-        }
-        values[key] = newValue
-      } else {
-        values[key] = nil
-        keys = keys.filter { $0 != key }
-      }
+      keys.append(key)
+      values[key] = newValue
     }
   }
 }
